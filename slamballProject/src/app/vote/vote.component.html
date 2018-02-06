@@ -1,21 +1,27 @@
-<div class="container p-0">
-      <div class="d-flex flex-wrap w-100">
+<div class="container">
+  <div class="d-flex">
+      <div class="d-flex flex-wrap justify-content-start w-100">
         <ng-container *ngFor="let ville of nosVilles | orderByName:'name'">
-          <button (click)="addVote(ville.name)"
-                  type="submit"
-                  [class]="ville.isWanted
-                    ? 'itemVille p-2 border border-success border-sizing rounded text-center m-1 w-24'
-                    : 'itemVille p-2 border border-dark border-sizing rounded text-center m-1 w-24'"
-                  [disabled] = hVoted>
-            <span>{{ ville.name }}</span>
-            <span class="text-success">{{ ville.nbVote }}</span>
-          </button>
+          <h3 (click)="addVote(ville.name)"
+              [class]="ville.isWanted
+          ? 'font-weight-bold pt-4 pb-4 btn btn-outline-success text-center m-1 w-24 d-flex justify-content-between align-items-center'
+          : 'font-weight-bold pt-4 pb-4 btn btn-outline-secondary text-center m-1 w-24 d-flex justify-content-between align-items-center'">
+            {{ ville.name }}
+            <span class="badge badge-dark">{{ ville.nbVote }} votes</span>
+          </h3>
         </ng-container>
       </div>
+  </div>
   <div>
-    <form (submit)="addVille(name.value)">
-      <input type="text" #name>
-      <input type="submit" [disabled] = hVoted>
+    <h3 class="w-75 text-center ml-auto mr-auto mt-4">
+      Votre envie ne se trouve pas dans la liste? <br>
+      <h4>
+        Pas de soucis, vous pouvez rentrer votre choix dans le champ ci dessous
+      </h4>
+    </h3>
+    <form class="w-75 m-auto d-flex" (submit)="addVille(name.value)">
+      <input class="form-control w-75 m-1" type="text" placeholder="Entrez le nom d'une ville" #name>
+      <input class="form-control w-25 m-1 btn btn-dark" type="submit">
     </form>
   </div>
 </div>

@@ -247,7 +247,7 @@ hr {
   .inner {
     max-width: calc(100% - 3rem); } }
 
-/* Button */
+/* Button *//*
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -361,7 +361,7 @@ input[type="reset"].primary:hover:active,
 input[type="button"].primary:hover:active,
 button.primary:hover:active,
 .button.primary:hover:active {
-  background-color: #b71824; }
+  background-color: #b71824; }*/
 
 /* Form */
 form {

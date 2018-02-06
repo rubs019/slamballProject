@@ -36,10 +36,12 @@ export class VoteComponent implements OnInit {
   }
   addVote(name) {
     var villes = this.nosVilles;
-
     for (var i = 0; i < villes.length; i++) {
 
-      if(name === villes[i].name){
+      if(villes[i].isWanted === true) {
+        break;
+      }
+      else if(name === villes[i].name){
         villes[i].nbVote += 1;
         villes[i].isWanted = true;
         this.hVoted = true;
