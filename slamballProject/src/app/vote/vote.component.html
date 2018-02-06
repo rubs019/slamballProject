@@ -1,19 +1,21 @@
 <div class="container">
   <div class="d-flex border-primary">
-      <ng-container *ngFor="let ville of nosVilles | orderByName:'name'">
+      <div class="d-flex flex-wrap justify-content-between">
+        <ng-container *ngFor="let ville of nosVilles | orderByName:'name'">
           <button (click)="addVote(ville.name)"
                   type="submit"
-                  class="p-2 border border-dark rounded w-50 m-1 text-center d-flex justify-content-between"
-                  [disabled] = hVoted >
+                  class="p-2 border border-dark rounded w-25 m-1 text-center"
+                  [disabled] = hVoted>
             <span>{{ ville.name }}</span>
             <span class="text-success">{{ ville.nbVote }}</span>
           </button>
-      </ng-container>
+        </ng-container>
+      </div>
   </div>
   <div>
     <form (submit)="addVille(name.value)">
       <input type="text" #name>
-      <input type="submit">
+      <input type="submit" [disabled] = hVoted>
     </form>
   </div>
 </div>

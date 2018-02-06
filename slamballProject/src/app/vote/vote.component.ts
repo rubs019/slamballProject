@@ -19,7 +19,7 @@ export class VoteComponent implements OnInit {
 
     if(villes){
       this.nosVilles = JSON.parse(villes)
-      this.hVoted = this.local.hasVotedQ()
+      this.hVoted = JSON.parse(this.local.hasVotedQ())
     }else{
       this.local.setVilles()
     }
@@ -32,12 +32,11 @@ export class VoteComponent implements OnInit {
         'nbVote' : 1
       }
     )
-    this.local.setVilles(this.nosVilles)
-
+    this.local.setVilles(this.nosVilles, this.hVoted)
   }
   addVote(name) {
     var villes = this.nosVilles;
-    
+
     for (var i = 0; i < villes.length; i++) {
 
       if(name === villes[i].name){
