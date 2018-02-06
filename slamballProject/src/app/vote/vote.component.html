@@ -1,9 +1,10 @@
 <div class="container">
   <div class="d-flex border-primary">
       <ng-container *ngFor="let ville of nosVilles | orderByName:'name'">
-          <button (click)="addVote(ville.nbVote)"
+          <button (click)="addVote(ville.name)"
                   type="submit"
-                  class="p-2 border border-dark rounded w-50 m-1 text-center d-flex justify-content-between">
+                  class="p-2 border border-dark rounded w-50 m-1 text-center d-flex justify-content-between"
+                  [disabled] = hVoted >
             <span>{{ ville.name }}</span>
             <span class="text-success">{{ ville.nbVote }}</span>
           </button>
