@@ -6,6 +6,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { VoteComponent } from './vote/vote.component';
 import { OrderByNamePipe } from './order-by-name.pipe';
 import { LocalstorageService } from './localstorage.service';
+import { MapComponent } from "./map/map.component";
+import { AgmCoreModule } from "@agm/core";
+import { AgmDirectionModule } from "agm-direction";
 
 const routes: Routes = [
   {
@@ -16,6 +19,10 @@ const routes: Routes = [
   {
    path: 'vote',
     component: VoteComponent
+  },
+  {
+    path: 'map',
+    component: MapComponent
   }
 ];
 
@@ -24,11 +31,16 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     VoteComponent,
-    OrderByNamePipe
+    OrderByNamePipe,
+    MapComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AgmCoreModule.forRoot({
+      'apiKey': 'AIzaSyAXF6qdsnwE2v_QBgs0TKzHbuOTkfXUSXY'
+    }),
+    AgmDirectionModule
   ],
   providers: [LocalstorageService],
   bootstrap: [AppComponent]

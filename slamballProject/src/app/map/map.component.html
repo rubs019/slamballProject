@@ -1,0 +1,4 @@
+<agm-map [latitude]="lat" [longitude]="lng" [styles]="styles">
+  <agm-direction *ngIf="destination" [origin]="origin" [destination]="destination" [waypoints]="travel"></agm-direction>
+  <agm-marker [latitude]="47.394144" [longitude]="0.684840" iconUrl="assets/rsz_truck.png" [title]="'Futur destination'" (markerClick)="myAlert()"></agm-marker>
+</agm-map>
