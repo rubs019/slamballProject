@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+.itemVille{
+  box-sizing: border-box;
+}
+.w-24{
+  width: 24%!important;
+}

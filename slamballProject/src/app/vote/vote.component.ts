@@ -41,6 +41,7 @@ export class VoteComponent implements OnInit {
 
       if(name === villes[i].name){
         villes[i].nbVote += 1;
+        villes[i].isWanted = true;
         this.hVoted = true;
         break;
       }
