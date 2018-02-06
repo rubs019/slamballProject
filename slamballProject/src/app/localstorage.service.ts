@@ -5,6 +5,8 @@ export class LocalstorageService {
 
   constructor() { }
 
+  hasVoted = false;
+
   villes = [
     {
       'name' : 'Paris',
@@ -29,15 +31,17 @@ export class LocalstorageService {
     {
       'name' : 'Nice',
       'nbVote' : 12345,
-    },
+    }
   ];
 
-  setVilles(listVilles = this.villes) {
-
+  setVilles(listVilles = this.villes, voteQ = this.hasVoted) {
     localStorage.setItem("nosVilles", JSON.stringify(listVilles));
-
+    localStorage.setItem("hasVoted", JSON.stringify(voteQ));
   }
   getVilles() {
-    return localStorage.getItem("nosVilles")
+    return localStorage.getItem("nosVilles");
+  }
+  hasVotedQ() {
+    return localStorage.getItem("hasVoted");
   }
 }
