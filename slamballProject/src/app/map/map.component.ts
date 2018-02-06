@@ -269,10 +269,10 @@ export class MapComponent implements OnInit {
     'lng': 2.352222
   };
   destination = {
-    'lat': 43.296482,
-    'lng': 5.369780
+    'lat': 48.573405,
+    'lng': 7.752111
   };
-  travel = [{location: 'Lyon, FR'}, {location: 'Bordeaux, FR'}];
+  travel = [{location: 'Rennes, FR'},{location: 'La Rochelle, FR'}, {location: 'Toulouse, FR'}, {location: 'Marseille, FR'}, {location: 'Lyon, FR'}, {location: 'Bordeaux, FR'}];
   myAlert() {
     alert('Notre prochaine destination sera Bordeaux');
   }
