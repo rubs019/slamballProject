@@ -11,26 +11,32 @@ export class LocalstorageService {
     {
       'name' : 'Paris',
       'nbVote' : 240,
+      'isWanted' : false
     },
     {
       'name' : 'Bordeaux',
       'nbVote' : 40,
+      'isWanted' : false
     },
     {
       'name' : 'Lyon',
       'nbVote' : 123,
+      'isWanted' : false
     },
     {
       'name' : 'Grenoble',
       'nbVote' : 455,
+      'isWanted' : false
     },
     {
       'name' : 'Dijon',
       'nbVote' : 345,
+      'isWanted' : false
     },
     {
       'name' : 'Nice',
       'nbVote' : 12345,
+      'isWanted' : false
     }
   ];
 
