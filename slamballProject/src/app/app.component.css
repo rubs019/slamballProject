@@ -12,3 +12,27 @@ h4 {
 .come_soon span {
   font-size: 4.5em;
 }
+
+.sponsors {
+  position: relative;
+}
+
+.sponsors img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: grayscale(1);
+  transition: .4s ease-out;
+  width: 150px;
+}
+
+.sponsors img:hover {
+  cursor: pointer;
+  filter: grayscale(.2);
+}
+
+#cta {
+
+  padding: 70px 0 110px 0;
+
+}
