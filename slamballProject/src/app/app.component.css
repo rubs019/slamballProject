@@ -1,5 +1,6 @@
 #map {
-
+  margin: auto;
+  text-align: center;
 }
 
 h4 {
@@ -32,7 +33,11 @@ h4 {
 }
 
 #cta {
-
   padding: 70px 0 110px 0;
+}
 
+
+form {
+  display: flex;
+  justify-content: center;
 }
