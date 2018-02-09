@@ -2,13 +2,13 @@
   <div class="d-flex">
       <div class="d-flex flex-wrap justify-content-start w-100">
         <ng-container *ngFor="let ville of nosVilles | orderByName:'name'">
-          <h3 (click)="addVote2(ville)"
+          <button (click)="addVote2(ville)"
               [class]="ville.isWanted
           ? 'font-weight-bold pt-4 pb-4 btn btn-primary text-center m-1 w-24 d-flex justify-content-between align-items-center'
           : 'font-weight-bold pt-4 pb-4 btn btn-outline-primary text-center m-1 w-24 d-flex justify-content-between align-items-center'">
             {{ ville.name }}
             <span class="badge badge-dark">{{ ville.nbVote }} votes</span>
-          </h3>
+          </button>
         </ng-container>
       </div>
   </div>
@@ -20,7 +20,7 @@
       </h4>
     </h3>
     <form class="w-75 m-auto d-flex" (submit)="addVille(name.value)">
-      <input class="form-control w-75 m-1 bg-blanclight" type="text" placeholder="Entrez le nom d'une ville" #name>
+      <input class="selectVille form-control w-75 m-1 bg-blanclight" type="text" placeholder="Entrez le nom d'une ville" #name>
       <input class="form-control w-25 m-1 btn btn-dark" type="submit">
     </form>
   </div>

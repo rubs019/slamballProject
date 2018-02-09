@@ -29,7 +29,8 @@ export class VoteComponent implements OnInit {
     this.nosVilles.push(
       {
         'name' : name,
-        'nbVote' : 1
+        'nbVote' : 1,
+        'isWanted': true
       }
     )
     this.local.setVilles(this.nosVilles, this.hVoted)
@@ -59,5 +60,8 @@ export class VoteComponent implements OnInit {
     });
     this.nosVilles[primaryIndex].isWanted = !this.nosVilles[primaryIndex].isWanted;
     this.nosVilles[primaryIndex].isWanted ? this.nosVilles[primaryIndex].nbVote++ : this.nosVilles[primaryIndex].nbVote--
+
+    localStorage.setItem("nosVilles", JSON.stringify(this.nosVilles));
+    localStorage.setItem("hasVoted", this.hVoted);
   }
 }

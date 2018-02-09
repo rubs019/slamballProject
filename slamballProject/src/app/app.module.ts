@@ -9,6 +9,7 @@ import { LocalstorageService } from './localstorage.service';
 import { MapComponent } from "./map/map.component";
 import { AgmCoreModule } from "@agm/core";
 import { AgmDirectionModule } from "agm-direction";
+import { FormsModule } from "@angular/forms";
 
 const routes: Routes = [
   {
@@ -40,7 +41,8 @@ const routes: Routes = [
     AgmCoreModule.forRoot({
       'apiKey': 'AIzaSyAXF6qdsnwE2v_QBgs0TKzHbuOTkfXUSXY'
     }),
-    AgmDirectionModule
+    AgmDirectionModule,
+    FormsModule
   ],
   providers: [LocalstorageService],
   bootstrap: [AppComponent]
