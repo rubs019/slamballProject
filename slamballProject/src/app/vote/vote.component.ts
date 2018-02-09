@@ -18,7 +18,7 @@ export class VoteComponent implements OnInit {
     let villes = this.local.getVilles();
 
     if(villes){
-      this.nosVilles = JSON.parse(villes)
+      this.nosVilles = JSON.parse(villes);
       this.hVoted = JSON.parse(this.local.hasVotedQ())
     }else{
       this.local.setVilles()
@@ -50,5 +50,14 @@ export class VoteComponent implements OnInit {
     }
     localStorage.setItem("nosVilles", JSON.stringify(villes));
     localStorage.setItem("hasVoted", this.hVoted);
+  }
+
+  addVote2(ville) {
+    let primaryIndex = null;
+    this.nosVilles.filter((city, index) => {
+      if (city.name === ville.name){ primaryIndex = index }
+    });
+    this.nosVilles[primaryIndex].isWanted = !this.nosVilles[primaryIndex].isWanted;
+    this.nosVilles[primaryIndex].isWanted ? this.nosVilles[primaryIndex].nbVote++ : this.nosVilles[primaryIndex].nbVote--
   }
 }
