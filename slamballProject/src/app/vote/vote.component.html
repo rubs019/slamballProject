@@ -4,8 +4,8 @@
         <ng-container *ngFor="let ville of nosVilles | orderByName:'name'">
           <button (click)="addVote2(ville)"
               [class]="ville.isWanted
-          ? 'font-weight-bold pt-4 pb-4 btn btn-primary text-center m-1 w-24 d-flex justify-content-between align-items-center'
-          : 'font-weight-bold pt-4 pb-4 btn btn-outline-primary text-center m-1 w-24 d-flex justify-content-between align-items-center'">
+          ? 'font-weight-bold pt-4 pb-4 btn btn-bluel text-center m-1 w-24 d-flex justify-content-between align-items-center'
+          : 'font-weight-bold pt-4 pb-4 btn btn-outline-bluel text-center m-1 w-24 d-flex justify-content-between align-items-center'">
             {{ ville.name }}
             <span class="badge badge-dark">{{ ville.nbVote }} votes</span>
           </button>

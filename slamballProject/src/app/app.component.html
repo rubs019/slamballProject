@@ -17,7 +17,7 @@
     <h1><img src="assets/logo.png" alt="" style="width: 350px"></h1>
     <p>Venez découvrir notre show exceptionnel de Slamball, entre amis ou en famille venez découvrir ce sport et pourquoi y participez ?</p>
   </div>
-  <video autoplay loop muted playsinline src="../assets/banner.mp4"></video>
+  <video src="../assets/banner.mp4" autoplay loop muted playsinline></video>
 </section>
 
 <!-- Highlights -->
@@ -38,7 +38,9 @@
     <div class="come_soon">
       <h2 class="color-blanclight">Nous arrivons à Bordeaux</h2>
       <span>{{ count }}</span>
-      <p>Quel sera la prochaine ville ?</p>
+      <p>
+        <a href="#goToVote" class="color-orange scroll">Quel sera la prochaine ville ?</a>
+      </p>
     </div>
   </div>
 </section>
@@ -78,7 +80,7 @@
 </section>
 
 <!-- Testimonials -->
-<section class="wrapper bg-dgrey">
+<section class="wrapper bg-dgrey" id="goToVote">
   <div class="inner">
     <header class="special color-blanclight">
       <h2 class="color-blanclight">Votez pour la prochaine ville</h2>
