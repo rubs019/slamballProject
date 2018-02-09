@@ -34,6 +34,11 @@ h4 {
 
 #cta {
   padding: 70px 0 110px 0;
+  background-color: #ff3a1a;
+}
+
+#banner:after {
+  background: linear-gradient(-175deg, #fafbff 0%, #24282d 74%);
 }
 
 
