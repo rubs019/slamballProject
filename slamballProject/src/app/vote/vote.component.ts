@@ -26,14 +26,20 @@ export class VoteComponent implements OnInit {
   }
 
   addVille(name) {
+
+    this.switchSelect();
+
     this.nosVilles.push(
       {
         'name' : name,
         'nbVote' : 1,
         'isWanted': true
       }
-    )
-    this.local.setVilles(this.nosVilles, this.hVoted)
+    );
+    this.local.setVilles(this.nosVilles, this.hVoted);
+
+    localStorage.setItem("nosVilles", JSON.stringify(this.nosVilles));
+    localStorage.setItem("hasVoted", this.hVoted);
   }
   addVote(name) {
     var villes = this.nosVilles;
@@ -74,5 +80,21 @@ export class VoteComponent implements OnInit {
 
     localStorage.setItem("nosVilles", JSON.stringify(this.nosVilles));
     localStorage.setItem("hasVoted", this.hVoted);
+  }
+
+  private switchSelect() {
+    let primaryIndex;
+
+    // Recupère l'index de l'élément selectionner
+    this.nosVilles.filter((city, index) => {
+      if (city.name === name){ primaryIndex = index }
+    });
+
+    // Retire un vote a l'élément précédemment selectionner
+    // Passe tous les élément a false
+    this.nosVilles.filter((city, index) => {
+      if (city.isWanted){ this.nosVilles[index].nbVote-- }
+      city.isWanted = false
+    });
   }
 }
