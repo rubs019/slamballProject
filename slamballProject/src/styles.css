@@ -1,5 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+dark grey : #24282d
+bleu clair #54c3dd
+orange : #ff3a1a
+light: #fafbff
+*/
+.color-dgrey{
+  color: #24282d !important;
+}
+.bg-dgrey{
+  background-color: #24282d !important;
+}
+.color-orange{
+  color: #ff3a1a !important;
+}
+.color-blanclight{
+  color: #fafbff!important;
+}
+.bg-blanclight{
+  background-color: #fafbff!important;
+}
+.color-bluel{
+  color: #54c3dd !important;
+}
 
 .w-24{
   width: 24%!important;
 }
+/*
+.btn-outline-bleuclair{
+  color:#54c3dd ;
+  background-color:transparent;
+  background-image:none;
+  border-color:#54c3dd;
+}
+.btn-outline-bleuclair:hover
+{
+  color:#fff;
+  background-color:#54c3dd ;
+  border-color:#54c3dd;
+}
+.btn-outline-bleuclair.focus,.btn-outline-bleuclair:focus
+{
+  box-shadow:0 0 0 .2rem rgba(84,195,221,.5)
+}
+.btn-outline-bleuclair.disabled,.btn-outline-bleuclair:disabled
+{color:#54c3dd ;
+  background-color:transparent
+}
+.btn-outline-bleuclair:not(:disabled):not(.disabled).active,.btn-outline-bleuclair:not(:disabled):not(.disabled):active,.show>.btn-outline-bleuclair.dropdown-toggle
+{
+  color:#fff;
+  background-color:#54c3dd ;
+  border-color:#54c3dd
+}
+.btn-outline-bleuclair:not(:disabled):not(.disabled).active:focus,.btn-outline-bleuclair:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-bleuclair.dropdown-toggle:focus
+{
+  box-shadow:0 0 0 .2rem rgba(84,195,221,.5)
+}
+*/
+

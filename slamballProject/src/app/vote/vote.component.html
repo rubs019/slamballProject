@@ -4,23 +4,23 @@
         <ng-container *ngFor="let ville of nosVilles | orderByName:'name'">
           <h3 (click)="addVote(ville.name)"
               [class]="ville.isWanted
-          ? 'font-weight-bold pt-4 pb-4 btn btn-outline-success text-center m-1 w-24 d-flex justify-content-between align-items-center'
-          : 'font-weight-bold pt-4 pb-4 btn btn-outline-secondary text-center m-1 w-24 d-flex justify-content-between align-items-center'">
+          ? 'font-weight-bold pt-4 pb-4 btn btn-primary text-center m-1 w-24 d-flex justify-content-between align-items-center'
+          : 'font-weight-bold pt-4 pb-4 btn btn-outline-primary text-center m-1 w-24 d-flex justify-content-between align-items-center'">
             {{ ville.name }}
             <span class="badge badge-dark">{{ ville.nbVote }} votes</span>
           </h3>
         </ng-container>
       </div>
   </div>
-  <div>
-    <h3 class="w-75 text-center ml-auto mr-auto mt-4">
+  <div class="color-blanclight">
+    <h3 class="w-75 text-center ml-auto mr-auto mt-4 color-blanclight">
       Votre envie ne se trouve pas dans la liste? <br>
-      <h4>
+      <h4 class="color-blanclight">
         Pas de soucis, vous pouvez rentrer votre choix dans le champ ci dessous
       </h4>
     </h3>
     <form class="w-75 m-auto d-flex" (submit)="addVille(name.value)">
-      <input class="form-control w-75 m-1" type="text" placeholder="Entrez le nom d'une ville" #name>
+      <input class="form-control w-75 m-1 bg-blanclight" type="text" placeholder="Entrez le nom d'une ville" #name>
       <input class="form-control w-25 m-1 btn btn-dark" type="submit">
     </form>
   </div>
