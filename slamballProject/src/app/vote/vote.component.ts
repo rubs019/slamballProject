@@ -55,11 +55,22 @@ export class VoteComponent implements OnInit {
 
   addVote2(ville) {
     let primaryIndex = null;
+
+    // Recupère l'index de l'élément selectionner
     this.nosVilles.filter((city, index) => {
       if (city.name === ville.name){ primaryIndex = index }
     });
+
+    // Retire un vote a l'élément précédemment selectionner
+    // Passe tous les élément a false
+    this.nosVilles.filter((city, index) => {
+      if (city.isWanted){ this.nosVilles[index].nbVote-- }
+      city.isWanted = false
+    });
+
+    // Intervertis la valeur de l'élément selectionner
     this.nosVilles[primaryIndex].isWanted = !this.nosVilles[primaryIndex].isWanted;
-    this.nosVilles[primaryIndex].isWanted ? this.nosVilles[primaryIndex].nbVote++ : this.nosVilles[primaryIndex].nbVote--
+    this.nosVilles[primaryIndex].isWanted ? this.nosVilles[primaryIndex].nbVote++ : this.nosVilles[primaryIndex].nbVote--;
 
     localStorage.setItem("nosVilles", JSON.stringify(this.nosVilles));
     localStorage.setItem("hasVoted", this.hVoted);
