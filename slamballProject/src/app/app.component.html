@@ -1,32 +1,6 @@
-<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white mb-2">
-  <a class="navbar-brand" href="#">SLAMBALL</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-          aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link"  [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/vote']">Vote</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/map']">Map</a>
-      </li>
-    </ul>
-  </div>
-</nav>-->
 <!-- Header -->
 <header id="header">
   <a class="logo" [routerLink]="['/']">{{ title }}</a>
-  <!--<nav>
-    <a href="#menu">Menu</a>
-    <a href="#menu">Test</a>
-    <a href="#menu">Menu</a>
-    <a href="#menu">Menu</a>
-  </nav>-->
 </header>
 <!-- Nav -->
 <nav id="menu">
@@ -40,9 +14,8 @@
 <!-- Banner -->
 <section id="banner">
   <div class="inner">
-    <h1>{{ title }}</h1>
-    <p>A responsive business oriented template with a video background<br />
-      designed by <a href="https://templated.co/">TEMPLATED</a> and released under the Creative Commons License.</p>
+    <h1><img src="assets/logo.png" alt="" style="width: 350px"></h1>
+    <p>Venez découvrir notre show exceptionnel de Slamball, entre amis ou en famille venez découvrir ce sport et pourquoi y participez ?</p>
   </div>
   <video autoplay loop muted playsinline src="../assets/banner.mp4"></video>
 </section>
@@ -51,84 +24,56 @@
 <section class="wrapper">
   <div class="inner">
     <header class="special">
-      <h2>Nous venons chez vous</h2>
-      <p>Nous parcourons toute la France, pour promovoir ce sport, <a [routerLink]="['/vote']">décidez de la prochaine ville!</a></p>
+      <h2>Un show d'exception !</h2>
+      <p>Retrouvez Tony Parker, Nicolas BATUM et des professionels du Slamball pour un show unique en son genre !</p>
     </header>
     <div id="map">
-      <app-map></app-map>
+      <iframe width="80%" height="400" src="https://www.youtube.com/embed/2ouXw328WYI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-    <!--<div class="highlights">
-      <section>
-        <div class="content">
-          <header>
-            <a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
-            <h3>Feugiat consequat</h3>
-          </header>
-          <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-        </div>
-      </section>
-      <section>
-        <div class="content">
-          <header>
-            <a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
-            <h3>Ante sem integer</h3>
-          </header>
-          <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-        </div>
-      </section>
-      <section>
-        <div class="content">
-          <header>
-            <a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
-            <h3>Ipsum consequat</h3>
-          </header>
-          <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-        </div>
-      </section>
-      <section>
-        <div class="content">
-          <header>
-            <a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
-            <h3>Interdum gravida</h3>
-          </header>
-          <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-        </div>
-      </section>
-      <section>
-        <div class="content">
-          <header>
-            <a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
-            <h3>Faucibus consequat</h3>
-          </header>
-          <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-        </div>
-      </section>
-      <section>
-        <div class="content">
-          <header>
-            <a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
-            <h3>Accumsan viverra</h3>
-          </header>
-          <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-        </div>
-      </section>
-    </div>-->
   </div>
 </section>
 
-<section>
-  <div class="come_soon">
-    <h4>Nous arrivons à Bordeaux</h4>
-    <span>25:30:20</span>
-    <p>Suivez nous sur les résaux</p>
+<section class="wrapper bg-dgrey color-blanclight">
+  <div class="inner">
+    <div class="come_soon">
+      <h2 class="color-blanclight">Nous arrivons à Bordeaux</h2>
+      <span>{{ count }}</span>
+      <p>Quel sera la prochaine ville ?</p>
+    </div>
   </div>
 </section>
+
+<section class="mb-5 mt-5">
+  <div class="inner color-blanclight">
+    <app-map></app-map>
+  </div>
+</section>
+
 
 <!-- CTA -->
 <section id="cta" class="wrapper">
   <div class="inner">
-    <h2>Curabitur ullamcorper ultricies</h2>
-    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
+    <h2>Nos partenaires</h2>
+    <div class="row sponsors">
+      <div class="col-md-2">
+        <img src="https://www.francecars.fr/images/francecars.fr/logo.png" alt="">
+      </div>
+      <div class="col-md-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Decathlon_Logo.png" alt="">
+      </div>
+      <div class="col-md-2">
+        <img src="https://cdn.worldvectorlogo.com/logos/gopro-hero.svg" alt="">
+      </div>
+      <div class="col-md-2">
+        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Logo_L%27%C3%89quipe_21.svg/800px-Logo_L%27%C3%89quipe_21.svg.png" alt="">
+      </div>
+      <div class="col-md-2">
+        <img src="https://cdn.worldvectorlogo.com/logos/bnp-paribas-1.svg" alt="">
+      </div>
+      <div class="col-md-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png" alt="">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -140,8 +85,58 @@
       <p>Les votes seront étudiés et nous ferons tout notre possible pour faire venir le Slam BALL près de chez vous</p>
     </header>
       <app-vote></app-vote>
+    <!--<header class="special">
+      <h2>Quel sera la prochaine ville ?</h2>
+      <p>Nous parcourons toute la France, pour promovoir ce sport, <a [routerLink]="['/vote']">décidez de la prochaine ville!</a></p>
+      <form class="text-center">
+        <input type="text" placeholder="Enter your email" class="col-6">
+        <button class="col-2">Submit</button>
+      </form>
+    </header>-->
   </div>
 </section>
+
+<div class="testimonials">
+  <section>
+    <div class="content">
+      <blockquote>
+        <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+      </blockquote>
+      <div class="author">
+        <div class="image">
+          <img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1015.png&w=350&h=254" alt="" />
+        </div>
+        <p class="credit">- <strong>Tony PARKER</strong> <span>Basketteur</span></p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="content">
+      <blockquote>
+        <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+      </blockquote>
+      <div class="author">
+        <div class="image">
+          <img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3416.png&w=350&h=254" alt="" />
+        </div>
+        <p class="credit">- <strong>Nicolas BATUM</strong> <span>CEO - ABC Inc.</span></p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="content">
+      <blockquote>
+        <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+      </blockquote>
+      <div class="author">
+        <div class="image">
+          <img src="images/pic02.jpg" alt="" />
+        </div>
+        <p class="credit">- <strong>Janet Smith</strong> <span>CEO - ABC Inc.</span></p>
+      </div>
+    </div>
+  </section>
+</div>
 
 <!-- Footer -->
 <footer id="footer">

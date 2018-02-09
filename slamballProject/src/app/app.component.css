@@ -1,5 +1,6 @@
 #map {
-
+  margin: auto;
+  text-align: center;
 }
 
 h4 {
@@ -11,4 +12,36 @@ h4 {
 
 .come_soon span {
   font-size: 4.5em;
+}
+
+.sponsors {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.sponsors img {
+  filter: grayscale(1);
+  transition: .4s ease-out;
+  width: 150px;
+}
+
+.sponsors img:hover {
+  cursor: pointer;
+  filter: grayscale(.2);
+}
+
+#cta {
+  padding: 70px 0 110px 0;
+  background-color: #ff3a1a;
+}
+
+#banner:after {
+  background: linear-gradient(-175deg, #fafbff 0%, #24282d 74%);
+}
+
+
+form {
+  display: flex;
+  justify-content: center;
 }
